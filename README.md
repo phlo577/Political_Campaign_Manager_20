@@ -1,22 +1,3 @@
+Political Campaign Manager '20
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Welcome to your Node.js project on Cloud9 IDE!
-
-This chat example showcases how to use `socket.io` with a static `express` server.
-
-## Running the server
-
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+A game in which you roleplay as the manager of a political campaign in the 2020 US elections - for either Kanye West or Dwayne 'The Rock' Johnson's team. Craft your team out of multiple roles available, react to trends, scandals, twists, sabotage, manage your funds carefully and choose the proper action at the right time, with the possibility of unleashing devastating combos on the opposing side! This game combines elements of statistics, data visualisations, political know-how and celebrity cameos with turn-based gameplay in order to prove your mettle in the big business of politics. And most of all, be prepared for a lot of fun!
