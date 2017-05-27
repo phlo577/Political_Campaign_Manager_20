@@ -9,10 +9,32 @@ var c = $('.home-page:visible, .container:visible');
 
 c.slideUp('slow', function(){
 
-c.next('.container').slideDown('slow');
+c.next('.container').slideDown('slow', function(){
+    
+    if ($('.day').is(':visible')) {$('.day').not('.day-'+ day).hide();}
+    
+});
 
 });
 
+}
+
+
+function showActionPlan(candidateFlag){
+    
+var teamLabels = candidates[playing].team.map(m => m['name'] );
+
+
+
+var actions = candidates[playing].team.map(m => Object.keys(m['actions']['Actions']));
+
+
+
+var actionTree = teamLabels.map(function(t,i){return "<div class='member'><div class='memberName'>" + t + "</div>" + actions[i].map(function(a, j){return "<div><img src='" + candidates[playing].team[i]['actions']['Actions'][a].src + "'/></div><div class='cost'>" + candidates[playing].team[i]['actions']['Actions'][a].cost +"</div><div class='cost'>" + candidates[playing].team[i]['actions']['Actions'][a].cost +"</div><div class='actionButton'>Select</div>"}).join('\n') +  "</div>"});
+
+$('.screen').empty();
+$('.screen').html(actionTree.join('\n'));
+    
 }
 
 $( document ).ready(function() {
@@ -79,6 +101,11 @@ $(".container:not(':first')").hide();
 
 $('.home-page .turnButton').hide();
 
+var agendaOpts = labelsArr.slice(29,46).map(function(e,i) { return "<div class='agendaItem agendaItem-" + e + "'>" + e.replace('_', ' ') + "</div><div class='agendaButton'>Pick</div>"})
+
+$('.agendaScreen').html(agendaOpts);
+
+
 $('.home-page button').on('click', function(){
 
 nextScreen();
@@ -88,10 +115,31 @@ nextScreen();
 $('.hireButton').on('click', function(ev){
 
 var tx = $(ev.target).closest('.entity').find('.entityText').text().trim();
-$(ev.target).closest('.entity').remove();
-candidates[playing]['team'].push(entities[tx]); withdrawSum(playing, entities[tx].cost);
+$(ev.target).closest('.entity').fadeOut(function(){
+    
+    $(ev.target).closest('.entity').remove();
+    
+});
+
+candidates[playing]['team'].push({'name': tx, 'actions': entities[tx]}); withdrawSum(playing, entities[tx].cost);
 
 if (candidates[playing]['team'].length == 5) { nextScreen(); switchPlayer();}  
 
 });
+
+$('.agendaButton').on('click', function(ev){
+
+var tx = $(ev.target).prev('.agendaItem').text().trim();
+$(ev.target).prev('.agendaItem').add($(ev.target)).fadeOut(function(){
+    
+   $(ev.target).prev('.agendaItem').add($(ev.target)).remove();
+    
+})
+candidates[playing]['agenda'].push(tx); 
+
+if (candidates[playing]['agenda'].length == 6) { nextScreen(); switchPlayer();}  
+
 });
+});
+
+$('.tabs').find('tab:eq(1)').on('click', showActionPlan);

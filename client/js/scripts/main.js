@@ -267,8 +267,6 @@ candidates[candidateFlag].funds = candidates[candidateFlag].funds - sum;
 
 if (candidates[candidateFlag].funds < 0) { candidates[candidateFlag].funds = 0; addToInbox(candidateFlag, constants['FUNDS_DEPLETED_EMAIL']);}
 
-
-
 }
 
 
@@ -280,6 +278,14 @@ candidates[candidateFlag].funds = candidates[candidateFlag].funds + sum;
 
 function switchPlayer(){
     
+      //  switchDay();
     playing = playing%2+1;
     
 }
+
+function switchDay(){
+    
+    day = day + 1;
+    
+}
+

@@ -4,6 +4,7 @@ $default-font:"Open Sans";
 $default-font-size : 18px;
 $kanye-color:#ed1c24;
 $rock-color:#22205f;
+$green-button-color:#2ecc71;
 
 @mixin tabs-styles($color){
     .tabs{
@@ -30,7 +31,7 @@ $rock-color:#22205f;
             font-size: 25px;
             &:hover{
               border:1px solid darken( $color, 20% );  
-              box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
             }
     }
     
@@ -59,22 +60,70 @@ $rock-color:#22205f;
             position: absolute;
             right: 10px;
             bottom: -15px;
+            &:hover{
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            }
         }
     }
     .ability{
             display: inline-block;
-            padding: 10px 15px;
+          //  padding: 10px 15px;
             text-align:center;
         .abilityType {
             text-transform: uppercase;
             font-weight: 900;
+            }
+        .abilityImage {
+            padding: 0 35px;
 }
-    }
+        }
+        
+    
     
 }
+@mixin agendaScreen($color){
+    .agendaItem {
+        font-size: 18px;
+        color: white;
+        background-color: $color;
+        padding: 5px 10px;
+        max-width: 350px;
+        margin: 5px;
+        display: inline-block;
+        min-width:300px;
+    }
+    .agendaButton {
+        display: inline-block;
+        background-color: $green-button-color;
+        padding: 5px 10px;
+        color: white;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        &:hover{
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            }
+}
+    
+}
+
 body{
     font-family:$default-font;
-    background-color:#f3f3f4;
+    background-image: url("../img/background5.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+    //height:768px;
+}
+
+.background-image-smecher{
+     background-image: url("../img/background4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        height:768px;
+    
 }
 
         .left-candidate{
@@ -215,7 +264,7 @@ body{
     font-family:$default-font;
     &:hover{
         border: 2px solid #22205f;
-        box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
     }
 }
@@ -243,5 +292,19 @@ body{
 .selection-rock.selectScreen.container{
    @include selectionContainer($rock-color); 
     
+    
+}
+.agenda-kanye.agendaScreen.container{
+    @include agendaScreen($kanye-color); 
+    
+}
+
+.agenda-rock.agendaScreen.container{
+    @include agendaScreen($rock-color); 
+    
+}
+
+.screen{
+    height:600px;
     
 }

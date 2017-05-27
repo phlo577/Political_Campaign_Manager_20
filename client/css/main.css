@@ -1,7 +1,15 @@
 /*------------General Rules---------*/
 body {
   font-family: "Open Sans";
-  background-color: #f3f3f4; }
+  background-image: url("../img/background5.png");
+  background-repeat: repeat-y;
+  background-size: contain; }
+
+.background-image-smecher {
+  background-image: url("../img/background4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 768px; }
 
 .left-candidate {
   background-image: url("../img/the_rock.png");
@@ -92,7 +100,7 @@ body {
     font-family: "Open Sans"; }
     .home-page .container button.btn.btn-default:hover {
       border: 2px solid #22205f;
-      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); }
 
 .container-kanye .tabs {
   text-align: center; }
@@ -116,7 +124,7 @@ body {
   font-size: 25px; }
   .container-kanye .turnButton:hover {
     border: 1px solid #970c11;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 
 .container-rock .tabs {
   text-align: center; }
@@ -140,7 +148,7 @@ body {
   font-size: 25px; }
   .container-rock .turnButton:hover {
     border: 1px solid #070613;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 
 .selection-kanye.selectScreen.container .entityText {
   border: 1px solid #c61017;
@@ -162,14 +170,17 @@ body {
     position: absolute;
     right: 10px;
     bottom: -15px; }
+    .selection-kanye.selectScreen.container .entity .hireButton:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 
 .selection-kanye.selectScreen.container .ability {
   display: inline-block;
-  padding: 10px 15px;
   text-align: center; }
   .selection-kanye.selectScreen.container .ability .abilityType {
     text-transform: uppercase;
     font-weight: 900; }
+  .selection-kanye.selectScreen.container .ability .abilityImage {
+    padding: 0 35px; }
 
 .selection-rock.selectScreen.container .entityText {
   border: 1px solid #141339;
@@ -191,11 +202,63 @@ body {
     position: absolute;
     right: 10px;
     bottom: -15px; }
+    .selection-rock.selectScreen.container .entity .hireButton:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 
 .selection-rock.selectScreen.container .ability {
   display: inline-block;
-  padding: 10px 15px;
   text-align: center; }
   .selection-rock.selectScreen.container .ability .abilityType {
     text-transform: uppercase;
     font-weight: 900; }
+  .selection-rock.selectScreen.container .ability .abilityImage {
+    padding: 0 35px; }
+
+.agenda-kanye.agendaScreen.container .agendaItem {
+  font-size: 18px;
+  color: white;
+  background-color: #ed1c24;
+  padding: 5px 10px;
+  max-width: 350px;
+  margin: 5px;
+  display: inline-block;
+  min-width: 300px; }
+
+.agenda-kanye.agendaScreen.container .agendaButton {
+  display: inline-block;
+  background-color: #2ecc71;
+  padding: 5px 10px;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-weight: 900;
+  text-transform: uppercase; }
+  .agenda-kanye.agendaScreen.container .agendaButton:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+
+.agenda-rock.agendaScreen.container .agendaItem {
+  font-size: 18px;
+  color: white;
+  background-color: #22205f;
+  padding: 5px 10px;
+  max-width: 350px;
+  margin: 5px;
+  display: inline-block;
+  min-width: 300px; }
+
+.agenda-rock.agendaScreen.container .agendaButton {
+  display: inline-block;
+  background-color: #2ecc71;
+  padding: 5px 10px;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-weight: 900;
+  text-transform: uppercase; }
+  .agenda-rock.agendaScreen.container .agendaButton:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+
+.screen {
+  height: 600px; }
