@@ -1,83 +1,83 @@
 var entities = {
 
-'Operations' : {
+'Field Operator' : {
 
 'Actions' : {
 
-'Spread the word' : {'description' : '', type: 'active'},
-'Voter suppresion' : {'description': '', type:'active'},
-'Electoral fraud' : {'description': '', type: 'super'},
-'Word of mouth awareness': {'description': '', type: 'passive'}
+'Spread the word' : {'description' : '', type: 'active', src: '', cost: 5000},
+'Voter suppresion' : {'description': '', type:'active', src: '', cost: 10000},
+'Electoral fraud' : {'description': '', type: 'super', src: '', cost: 15000},
+'Word of mouth awareness': {'description': '', type: 'passive', src: ''}
 },
 
-'description' : ''
+'description' : '',src: '',cost: 5000
 
 }, 
 
-'Advertising/PR' : {
+'PR Specialist' : {
 
 'Actions' : {
-'News spin' : {'description': '', type: 'active'},
-'Post-truth politicsSlogan' : {'description': '', type: 'passive'},
-'Attack ad' :  {'description': '', type: 'passive'},
-'Smear campaign': {'description': '', type: 'super'}
+'News spin' : {'description': '', type: 'active', src: '', cost: 5000},
+'Post-truth politics slogan' : {'description': '', type: 'passive', src: '', cost: 10000},
+'Attack ad' :  {'description': '', type: 'active', src: '', cost: 15000},
+'Smear campaign': {'description': '', type: 'super', src: '', cost: 20000}
 },
 
-'description' : ''
+'description' : '',src: '',cost: 5000
 },
 
-'Social media engineer' : {
-
-'Actions' : {
-
-'Targeted ad' : {'description': '', type: 'active', 'toggle': true},
-'Troll army' : {'description': '', type: 'passive'},
-'Candidate posts' : {'description': '', type: 'passive'},
-'Spread fake news' : {'description': '', type: 'active'}
-
-},
-
-'description' : ''
-
-},
-
-'Financial expert': {
+'Social Media Engineer' : {
 
 'Actions' : {
 
-'Cost reduction' :{'description': '', type: 'passive'},
-'Fundraising event' : {'description': '', type: 'active', cooldown: 7},
-'Corporate sponsorships' : {'description': '', type: 'super'},
-'Tax evasion': {'description': '', type: 'passive', toggle: true, risk: 25}
+'Targeted ad' : {'description': '', type: 'active', 'toggle': true, src: '', cost: 5000},
+'Troll army' : {'description': '', type: 'passive', src: '', cost: 2000},
+'Candidate posts' : {'description': '', type: 'passive', src: ''},
+'Spread fake news' : {'description': '', type: 'active', src: '', cost:5000}
+
 },
 
-'description' : ''
+'description' : '',src: '',cost: 5000
+
 },
 
-'Political analyst': {
+'Financial Expert': {
 
 'Actions' : {
 
-'Add political angle' :{'description': '', type: 'active', cooldown:7},
-'Campaign leaks' : {'description': '', type: 'super'},
-'Political intel' : {'description': '', type: 'active'},
-'POlitical expertise': {'description': '', type: 'passive'}
+'Cost reduction' :{'description': '', type: 'passive', src: ''},
+'Fundraising event' : {'description': '', type: 'active', cooldown: 7, src: '', cost:10000, generates: 100000},
+'Corporate sponsorships' : {'description': '', type: 'super', src: '', cost: 50000, generates: 500000},
+'Tax evasion': {'description': '', type: 'passive', toggle: true, risk: 25, src: ''}
 },
 
-'description' : ''
+'description' : '',src: '',cost: 5000
 },
 
-'Data analyst': {
+'Political Analyst': {
 
 'Actions' : {
 
-'Create poll' : {'description': '', type: 'active'},
-'Create fake poll' : {'description': '', type: 'active'},
-'Social expertise' : {'description': '', type: 'passive'},
-'Artificial intelligence takeover': {'description': '', type: 'super', toggle: true}
+'Add political angle' :{'description': '', type: 'active', cooldown:7, src: '', cost:10000},
+'Campaign leaks' : {'description': '', type: 'super', src: '', cost:30000},
+'Political intel' : {'description': '', type: 'active', src: '', cost:5000},
+'Political expertise': {'description': '', type: 'passive', src: ''}
 },
 
-'description' :''
+'description' : '',src: '',cost: 5000
+},
+
+'Data Analyst': {
+
+'Actions' : {
+
+'Create poll' : {'description': '', type: 'active', src: '', cost:10000},
+'Create fake poll' : {'description': '', type: 'active' , src: '',cost:1000},
+'Social expertise' : {'description': '', type: 'passive', src: ''},
+'Artificial intelligence takeover': {'description': '', type: 'super', toggle: true, src: '', cost:150000}
+},
+
+'description' :'', src: '', cost: 5000
 
 },
 
@@ -85,14 +85,14 @@ var entities = {
 
 'Actions' : {
 
-'Dig for dirt' : {'description': '', type: 'active'},
-'Fund depletion' : {'description': '', type: 'active', toggle: true, risk: 25},
-'DDos of service attack' : {'description': '', type: 'active'},
-'Network security': {'description': '', type: 'super'}
+'Dig for dirt' : {'description': '', type: 'active', src: '', cost:1000},
+'Fund depletion' : {'description': '', type: 'active', toggle: true, risk: 25, src: '', cost:5000},
+'DDos of service attack' : {'description': '', type: 'active', src: '', cost:20000},
+'Network security': {'description': '', type: 'super', src: ''}
 
 },
 
-'description' :''
+'description' :'',src: '', cost: 5000
 
 },
 
@@ -100,14 +100,14 @@ var entities = {
 
 'Actions' : {
 
-'Backhanded deals' : {'description': '', type: 'active'},
-'Networking' : {'description': '', type: 'passive'},
-'Filler position' : {'description': '', type: 'super'},
+'Backhanded deals' : {'description': '', type: 'active', src: '', cost:20000},
+'Networking' : {'description': '', type: 'passive', src: '',cost:0},
+'Filler position' : {'description': '', type: 'super', src: '', cost:0},
 
 
 },
 
-'description' :''
+'description' :'', src: '', cost: 5000
 
 },
 
@@ -115,27 +115,29 @@ var entities = {
 
 'Actions' : {
 
-'Emulate ability' : {'description': '', type: 'active'},
-"You don't want to know" : {'description': '', type: 'passive'},
-'Accidents happen' : {'description': '', type: 'super'},
-'Legal liability' : {description: '', type: 'passive'}
+'Emulate ability' : {'description': '', type: 'active', src: '', cost:2500},
+"You don\'t want to know" : {'description': '', type: 'passive', src: '',cost:5000},
+'Accidents happen' : {'description': '', type: 'super', src: '', cost:15000},
+'Legal liability' : {description: '', type: 'passive', src: ''}
 },
 
-'description' :''
+'description' :'',src: '', cost: 5000
 
 },
 
-'Legal': {
+'Legal Specialist': {
 
 'Actions' : {
 
-"Devil's advocate" : {'description': '', type: 'passive'},
-'Cease and desist' : {'description': '', type: 'active'},
-"Bury 'em in paperwork" : {'description': '', type: 'super'},
+"Devil\'s advocate" : {'description': '', type: 'passive', src: '',cost:5000},
+'Cease and desist' : {'description': '', type: 'active', src: '', cost:5000},
+"Bury \'em in paperwork" : {'description': '', type: 'super', src: '',cost:10000},
 
 },
 
-'description' :''
+'description' :'',
+src: '',
+cost: 5000
 
 },
 
@@ -152,4 +154,53 @@ var combos = {
 'DDos attack' : ['Fund depletion' in actionsTaken&& actionsTaken['Fund depletion'].length >= 2],
 'Bury them in paperwork': ['Lawsuit' in actionsTaken&&  'Cease and desist' in actionsTaken&& actionsTaken['Lawsuit'].length + actionsTaken['Cease and desist'].length >= 2],
 'Campaign leaks' : ['Political Angle' in actionsTaken&&  'Political intel' in actionsTaken&& actionsTaken['Political angle'].length + actionsTaken['Political intel']]
+};
+
+var candidates = {
+
+1: {
+
+'agenda' : [],
+'funds' : 100000,
+'penalties' : [],
+
+actions: {
+
+'ongoing' : [],
+
+}, 
+
+team :[],
+src : ''
+
+},
+
+2: {
+
+'agenda' : [],
+'funds' : 100000,
+'penalties' : [],
+
+actions: {
+
+'ongoing' : [],
+
+},
+
+team: [],
+src : ''
+
 }
+
+};
+
+
+
+var constants = {
+
+'FUNDS_DEPLETED_EMAIL' : {text: '', read: false}
+
+};
+
+
+

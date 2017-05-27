@@ -1,6 +1,7 @@
 /*------------General Rules---------*/
 body {
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  background-color: #f3f3f4; }
 
 .left-candidate {
   background-image: url("../img/the_rock.png");
@@ -90,4 +91,111 @@ body {
     font-weight: 900;
     font-family: "Open Sans"; }
     .home-page .container button.btn.btn-default:hover {
-      border: 2px solid #22205f; }
+      border: 2px solid #22205f;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+
+.container-kanye .tabs {
+  text-align: center; }
+  .container-kanye .tabs .tab.col-md-4 {
+    border: 1px solid #c61017;
+    background-color: #ed1c24;
+    color: white;
+    height: 50px;
+    padding: 5px;
+    font-size: 25px; }
+
+.container-kanye .turnButton {
+  position: absolute;
+  top: 60px;
+  right: 150px;
+  border: 1px solid #c61017;
+  background-color: #ed1c24;
+  color: white;
+  height: 50px;
+  padding: 5px;
+  font-size: 25px; }
+  .container-kanye .turnButton:hover {
+    border: 1px solid #970c11;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+
+.container-rock .tabs {
+  text-align: center; }
+  .container-rock .tabs .tab.col-md-4 {
+    border: 1px solid #141339;
+    background-color: #22205f;
+    color: white;
+    height: 50px;
+    padding: 5px;
+    font-size: 25px; }
+
+.container-rock .turnButton {
+  position: absolute;
+  top: 60px;
+  right: 150px;
+  border: 1px solid #141339;
+  background-color: #22205f;
+  color: white;
+  height: 50px;
+  padding: 5px;
+  font-size: 25px; }
+  .container-rock .turnButton:hover {
+    border: 1px solid #070613;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2); }
+
+.selection-kanye.selectScreen.container .entityText {
+  border: 1px solid #c61017;
+  background-color: #ed1c24;
+  color: white;
+  height: 50px;
+  padding: 5px;
+  font-size: 25px;
+  margin: 10px; }
+
+.selection-kanye.selectScreen.container .entity {
+  position: relative; }
+  .selection-kanye.selectScreen.container .entity .hireButton {
+    color: white;
+    padding: 5px 21px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #27ae60;
+    position: absolute;
+    right: 10px;
+    bottom: -15px; }
+
+.selection-kanye.selectScreen.container .ability {
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center; }
+  .selection-kanye.selectScreen.container .ability .abilityType {
+    text-transform: uppercase;
+    font-weight: 900; }
+
+.selection-rock.selectScreen.container .entityText {
+  border: 1px solid #141339;
+  background-color: #22205f;
+  color: white;
+  height: 50px;
+  padding: 5px;
+  font-size: 25px;
+  margin: 10px; }
+
+.selection-rock.selectScreen.container .entity {
+  position: relative; }
+  .selection-rock.selectScreen.container .entity .hireButton {
+    color: white;
+    padding: 5px 21px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #27ae60;
+    position: absolute;
+    right: 10px;
+    bottom: -15px; }
+
+.selection-rock.selectScreen.container .ability {
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center; }
+  .selection-rock.selectScreen.container .ability .abilityType {
+    text-transform: uppercase;
+    font-weight: 900; }

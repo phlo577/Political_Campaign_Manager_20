@@ -179,7 +179,7 @@ function mergeSubsetIntoDb(candidateFlag, columnObj){
        //console.log(colArr);
        
         for (var i = 0; i < kanyeDb.length; i++) {
-         console.log('changing value ' +  kanyeDb[i][colKeys[k]] + ' on line ' + i + ' to ' + colArr[i])  ; 
+       //  console.log('changing value ' +  kanyeDb[i][colKeys[k]] + ' on line ' + i + ' to ' + colArr[i])  ; 
         kanyeDb[i][colKeys[k]] = colArr[i];
         kanyeDb[i][92] = kanyeEq.hypothesize({x: kanyeDb[i].slice(0,92)})[0];
         
@@ -195,7 +195,7 @@ function mergeSubsetIntoDb(candidateFlag, columnObj){
         for (var i = 0; i < rockDb.length; i++) {
             
         rockDb[i][colKeys[k]] = colArr[i];
-         rockDb[i][92] = rockEq.hypothesize({x: rockDb[i].slice(0,92)})[0];
+         rockDb[i][93] = rockEq.hypothesize({x: rockDb[i].slice(0,93)})[0];
 
     }
     
@@ -251,3 +251,35 @@ function getVotesPercentages(criteriaObj){
 
 //use :  poll by criteria : getVotesPercentages({'col' : 20, value: 1})
 // national getVotesPercentages({})
+
+
+function addToInbox(candidateFlag, email){
+
+
+candidates[candidateFlag].inbox.push(email);
+
+
+}
+
+function withdrawSum(candidateFlag, sum) {
+
+candidates[candidateFlag].funds = candidates[candidateFlag].funds - sum;
+
+if (candidates[candidateFlag].funds < 0) { candidates[candidateFlag].funds = 0; addToInbox(candidateFlag, constants['FUNDS_DEPLETED_EMAIL']);}
+
+
+
+}
+
+
+function addSum(candidateFlag, sum) {
+
+candidates[candidateFlag].funds = candidates[candidateFlag].funds + sum;
+
+}
+
+function switchPlayer(){
+    
+    playing = playing%2+1;
+    
+}

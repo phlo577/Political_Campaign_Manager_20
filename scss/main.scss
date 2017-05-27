@@ -2,8 +2,79 @@
 
 $default-font:"Open Sans";
 $default-font-size : 18px;
+$kanye-color:#ed1c24;
+$rock-color:#22205f;
+
+@mixin tabs-styles($color){
+    .tabs{
+        text-align:center;
+        .tab.col-md-4{
+            border:1px solid darken( $color, 10% );
+            background-color:$color;
+            color:white;
+            height: 50px;
+            padding: 5px;
+            font-size: 25px;
+        }
+        
+    }
+    .turnButton {
+            position: absolute;
+            top: 60px;
+            right: 150px;
+            border:1px solid darken( $color, 10% );
+            background-color:$color;
+            color:white;
+            height: 50px;
+            padding: 5px;
+            font-size: 25px;
+            &:hover{
+              border:1px solid darken( $color, 20% );  
+              box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+            }
+    }
+    
+    
+}
+
+@mixin selectionContainer($color){
+    .entityText{
+        border:1px solid darken( $color, 10% );
+        background-color:$color;
+        color:white;
+        height: 50px;
+        padding: 5px;
+        font-size: 25px;
+        //max-width:300px;
+        margin:10px;
+    }
+    .entity{
+    position:relative;
+        .hireButton {
+            color: white;
+            padding: 5px 21px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            background-color: #27ae60;
+            position: absolute;
+            right: 10px;
+            bottom: -15px;
+        }
+    }
+    .ability{
+            display: inline-block;
+            padding: 10px 15px;
+            text-align:center;
+        .abilityType {
+            text-transform: uppercase;
+            font-weight: 900;
+}
+    }
+    
+}
 body{
     font-family:$default-font;
+    background-color:#f3f3f4;
 }
 
         .left-candidate{
@@ -38,6 +109,7 @@ body{
     background-image: url("../img/background4.png");
     background-repeat: no-repeat;
     background-size: cover;
+    
     height:768px;
     
         
@@ -143,8 +215,33 @@ body{
     font-family:$default-font;
     &:hover{
         border: 2px solid #22205f;
+        box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
     }
     }
 }
+    
+}
+
+
+
+.container-kanye{
+    @include tabs-styles($kanye-color);
+    
+}
+
+.container-rock{
+    @include tabs-styles($rock-color);
+    
+}
+
+.selection-kanye.selectScreen.container{
+   @include selectionContainer($kanye-color);
+    
+    
+}
+
+.selection-rock.selectScreen.container{
+   @include selectionContainer($rock-color); 
+    
     
 }
