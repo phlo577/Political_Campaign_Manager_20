@@ -68,7 +68,9 @@ var kanyeEq, rockEq;
 var kanyeDb, rockDb;
 
 kanyeDb = finalArr;
-rockDb = finalArr;
+rockDb = finalArr
+
+var preferencesScale = [ 0.3, 0.7] // less than 0.3 => doesn't matter, anything in between is ok, anything more => matters very much
 
 //for (var i = 0; i < excLines.length; i++) {
 
@@ -148,7 +150,13 @@ function updateDbSubset(columnObj, condObj, amountObj) {
     
     var colKeys = Object.keys(columnObj).map(e=> parseInt(e));
     
+    for (var i = 0; i < colKeys.length; i++) {
+        
+        resultObj[colKeys[i]] = columnObj[colKeys[i]].map(e => ('percent' in amountObj)? (e + e * amountObj.value/100) : e + amountObj.value);
+        
+    }
     
+    return resultObj;
     
 }
 
@@ -159,4 +167,87 @@ rockDb = finalArr;
     
 }
 
+function mergeSubsetIntoDb(candidateFlag, columnObj){
+    
+    var colKeys = Object.keys(columnObj).map(e=> parseInt(e));
+  //  console.log(colKeys);
+   
+   if (candidateFlag == 1){
+        
+    for (var k = 0; k < colKeys.length; k++){
+        var colArr = columnObj[colKeys[k]];
+       //console.log(colArr);
+       
+        for (var i = 0; i < kanyeDb.length; i++) {
+         console.log('changing value ' +  kanyeDb[i][colKeys[k]] + ' on line ' + i + ' to ' + colArr[i])  ; 
+        kanyeDb[i][colKeys[k]] = colArr[i];
+        kanyeDb[i][92] = kanyeEq.hypothesize({x: kanyeDb[i].slice(0,92)})[0];
+        
+    }
+    
+    }
+    
+    } else {
+        
+      for (var k = 0; k < colKeys.length; k++){
+        var colArr = columnObj[colKeys[k]];
+       
+        for (var i = 0; i < rockDb.length; i++) {
+            
+        rockDb[i][colKeys[k]] = colArr[i];
+         rockDb[i][92] = rockEq.hypothesize({x: rockDb[i].slice(0,92)})[0];
+
+    }
+    
+    }
+        
+    }
+    
+ 
+    
+}
   
+  
+  /* TODO manipulate function 
+  var col = selectColumns(kanyeDb, [2])
+
+kanyeDb2 = kanyeDb;
+
+var newcol = updateDbSubset(col, {}, {value: 60}); setTimeout(function(){mergeSubsetIntoDb(1, newcol);}, 100); 
+  
+  */
+  
+  
+
+function getVotesPercentages(criteriaObj){
+    
+    var fun, value;
+    
+    var colIndex = criteriaObj['col'];
+    
+    if ('value' in criteriaObj) {fun = compareAgainstEqual;}
+    else if ('filter' in criteriaObj) {fun = compareAgainstGreater;}
+    
+    value = criteriaObj.value;
+    
+    var votesKanye = selectColumns(kanyeDb, [92])[92].filter(function(e, i){return (typeof fun == 'function')? fun(kanyeDb[i][colIndex], value) : true});
+    var votesRock = selectColumns(rockDb, [93])[93].filter(function(e, i){return (typeof fun == 'function')? fun(rockDb[i][colIndex], value) : true});
+    
+    console.log(votesKanye);
+     console.log(votesRock);
+    var totalVoters = votesKanye.length;
+    
+    var finalArr = Array(votesKanye.length).fill(0).map(function(e,i){return ((Math.max(votesKanye[i], votesRock[i]) == votesKanye[i])? 1:  2 )});
+    
+    
+    var finalMap = new Map([...new Set(finalArr)].map(
+    x => [x, finalArr.filter(y => y === x).length]
+    ));
+
+//return percentages for each candidate
+    return [finalMap.get(1) / totalVoters * 100, finalMap.get(2) / totalVoters * 100, criteriaObj];
+    
+} 
+
+//use :  poll by criteria : getVotesPercentages({'col' : 20, value: 1})
+// national getVotesPercentages({})

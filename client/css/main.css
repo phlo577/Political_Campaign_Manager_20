@@ -1,2 +1,93 @@
+/*------------General Rules---------*/
 body {
-  color: #b4d455; }
+  font-family: "Open Sans"; }
+
+.left-candidate {
+  background-image: url("../img/the_rock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+
+.right-candidate {
+  background-image: url("../img/kanye.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+
+.home-page {
+  background-image: url("../img/background4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 768px;
+  /* Flipping containers */
+  /*
+       .left{
+               margin-left: 200px;
+                padding-top: 90px;
+       }*/
+  /* flip the pane when hovered */
+  /* flip speed goes here */
+  /* hide back of pane during swap */
+  /* front pane, placed above back */
+  /* back, initially hidden pane */
+  /*End Flipping containers*/ }
+  .home-page .container-fluid {
+    padding: 0; }
+    .home-page .container-fluid .row {
+      margin-top: 100px;
+      margin-left: 200px;
+      margin-right: 200px; }
+  .home-page .right {
+    float: right; }
+  .home-page .flip-container {
+    perspective: 1000px; }
+  .home-page .flip-container:hover .flipper, .home-page .flip-container.hover .flipper {
+    transform: rotateY(180deg); }
+  .home-page .flip-container, .home-page .front, .home-page .back {
+    width: 320px;
+    height: 320px; }
+  .home-page .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .home-page .front, .home-page .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .home-page .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg); }
+  .home-page .back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    height: 300px;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
+  .home-page .content-pictures p {
+    padding: 10px; }
+  .home-page .content-pictures h2 {
+    padding: 10px; }
+  .home-page .content-pictures h3 {
+    padding: 10px; }
+  .home-page .container .intro-text {
+    font-family: "Open Sans";
+    font-size: 18px;
+    padding: 15px 20px;
+    text-align: center; }
+  .home-page .container button.btn.btn-default {
+    margin: 0 auto;
+    width: 30%;
+    display: block;
+    margin-top: 30px;
+    border: 2px solid #ed1c24;
+    height: 56px;
+    background-image: none;
+    background-color: white;
+    font-size: 29px;
+    font-weight: 900;
+    font-family: "Open Sans"; }
+    .home-page .container button.btn.btn-default:hover {
+      border: 2px solid #22205f; }
