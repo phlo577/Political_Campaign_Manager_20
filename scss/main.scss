@@ -10,30 +10,40 @@ $green-button-color:#606060;
 @mixin tabs-styles($color){
     .tabs{
         text-align:center;
+        position:fixed;
+        bottom: 0px;
         .tab.col-md-4{
             border:1px solid darken( $color, 10% );
             background-color:$color;
             color:white;
             height: 50px;
+            width: 200px;
             padding: 5px;
             font-size: 25px;
+            &:hover{
+                border:1px solid darken( $color, 20% );  
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                cursor:pointer;
+            }
         }
         
     }
     .turnButton {
-            position: absolute;
-            top: 10px;
-            right: 185px;
+            position: fixed;
+            bottom: 0px;
+            right: 187px;
             border:1px solid darken( $color, 10% );
-            background-color:#2c3e50;
+            background-color:$green-button-color;
             color:white;
             height: 50px;
+            width: 200px;
             padding: 5px;
             font-size: 25px;
+            text-align:center;
             &:hover{
-              border:1px solid darken( $color, 20% );  
-             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-             cursor:pointer;
+                border:1px solid darken( $color, 20% );  
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                cursor:pointer;
             }
     }
     
@@ -87,6 +97,9 @@ $green-button-color:#606060;
     
 }
 @mixin agendaScreen($color){
+    padding-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
     .agendaItem {
         font-size: 18px;
         color: white;
@@ -95,6 +108,7 @@ $green-button-color:#606060;
         max-width: 350px;
         margin-top: 5px;
         margin-bottom: 5px;
+        margin-left: 10px;
         display: inline-block;
         min-width:300px;
     }
@@ -126,15 +140,15 @@ $green-button-color:#606060;
         }
     .memberName {
         margin: 10px;
-        color: white;
+        color: $color;
         font-size: 18px;
-        background-color: $color;
+        margin-top: 140px;
         padding: 10px;
     }
     .member{
         text-align:center;
         display: inline-block;
-        margin-bottom:20px;
+        margin-bottom:50px;
         vertical-align:top;
             min-width: 200px;
         .cost{
@@ -148,11 +162,14 @@ $green-button-color:#606060;
         
         .actionButton {
             background-color: $color;
-            padding: 10px;
+            padding: 5px;
             margin: 5px 45px;
-            font-size: 18px;
+            font-size: 12px;
             color: white;
             text-align:center;
+            &:hover{
+                cursor:pointer;
+            }
         }
         .actionButton.selected{
            background-color:$green-button-color; 
@@ -160,11 +177,15 @@ $green-button-color:#606060;
         }
         
         .actionName{
-            padding-top:5px;
-            
+            padding-top: 5px;
+            font-size: 16px;
         }
         
-        
+        .passiveButton{
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 32px;
+        }
     }
     
 }
@@ -188,9 +209,14 @@ $green-button-color:#606060;
     .statusBar{
        padding:15px;
        background-color: $color;
-       max-width: 700px;
-           color: white;
-    font-size: 18px;
+       color: white;
+       font-size: 14px;
+       margin-left: 10px;
+       margin-right: 10px;
+       position: fixed;
+       top: 0;
+       z-index: 100;
+       min-width: 1120px;
    }
     
 }
@@ -356,7 +382,23 @@ body{
     
 }
 
+.agendaHeader {
+    margin: 10px;
+}
 
+.pollResults{position: fixed;
+    top: 50%;
+    width: 60%;
+    left: 30%;
+    }
+
+.selectScreen .politics {
+    display: none;
+}
+
+.agendaScreen .politics {
+    display: none;
+}
 
 .container-kanye{
     @include tabs-styles($kanye-color);
@@ -370,7 +412,7 @@ body{
 
 .selection-kanye.selectScreen.container{
    @include selectionContainer($kanye-color);
-   padding-top: 20px;
+   padding-top: 120px;
    @include statusBarMixin($kanye-color)
     
     
@@ -378,7 +420,7 @@ body{
 
 .selection-rock.selectScreen.container{
     @include selectionContainer($rock-color); 
-    padding-top: 20px;
+    padding-top: 120px;
     @include statusBarMixin($rock-color)
     
 }
@@ -416,7 +458,7 @@ body{
         }
         
         .mail {
-             margin-top: 100px;
+             margin-top: 150px;
         		.header {
         		font-size: 24px;
         		font-weight: 900;
@@ -424,3 +466,7 @@ body{
         		}
         }
         
+
+.abilityDesc {
+    display: none;
+}

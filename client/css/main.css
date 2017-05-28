@@ -102,58 +102,91 @@ body {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       cursor: pointer; }
 
+.agendaHeader {
+  margin: 10px; }
+
+.pollResults {
+  position: fixed;
+  top: 50%;
+  width: 60%;
+  left: 30%; }
+
+.selectScreen .politics {
+  display: none; }
+
+.agendaScreen .politics {
+  display: none; }
+
 .container-kanye .tabs {
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  bottom: 0px; }
   .container-kanye .tabs .tab.col-md-4 {
     border: 1px solid #c61017;
     background-color: #ed1c24;
     color: white;
     height: 50px;
+    width: 200px;
     padding: 5px;
     font-size: 25px; }
+    .container-kanye .tabs .tab.col-md-4:hover {
+      border: 1px solid #970c11;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
 
 .container-kanye .turnButton {
-  position: absolute;
-  top: 10px;
-  right: 185px;
+  position: fixed;
+  bottom: 0px;
+  right: 187px;
   border: 1px solid #c61017;
-  background-color: #2c3e50;
+  background-color: #606060;
   color: white;
   height: 50px;
+  width: 200px;
   padding: 5px;
-  font-size: 25px; }
+  font-size: 25px;
+  text-align: center; }
   .container-kanye .turnButton:hover {
     border: 1px solid #970c11;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
 
 .container-rock .tabs {
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  bottom: 0px; }
   .container-rock .tabs .tab.col-md-4 {
     border: 1px solid #141339;
     background-color: #22205f;
     color: white;
     height: 50px;
+    width: 200px;
     padding: 5px;
     font-size: 25px; }
+    .container-rock .tabs .tab.col-md-4:hover {
+      border: 1px solid #070613;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
 
 .container-rock .turnButton {
-  position: absolute;
-  top: 10px;
-  right: 185px;
+  position: fixed;
+  bottom: 0px;
+  right: 187px;
   border: 1px solid #141339;
-  background-color: #2c3e50;
+  background-color: #606060;
   color: white;
   height: 50px;
+  width: 200px;
   padding: 5px;
-  font-size: 25px; }
+  font-size: 25px;
+  text-align: center; }
   .container-rock .turnButton:hover {
     border: 1px solid #070613;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
 
 .selection-kanye.selectScreen.container {
-  padding-top: 20px; }
+  padding-top: 120px; }
   .selection-kanye.selectScreen.container .entityText {
     border: 1px solid #c61017;
     background-color: #ed1c24;
@@ -187,12 +220,17 @@ body {
   .selection-kanye.selectScreen.container .statusBar {
     padding: 15px;
     background-color: #ed1c24;
-    max-width: 700px;
     color: white;
-    font-size: 18px; }
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-width: 1120px; }
 
 .selection-rock.selectScreen.container {
-  padding-top: 20px; }
+  padding-top: 120px; }
   .selection-rock.selectScreen.container .entityText {
     border: 1px solid #141339;
     background-color: #22205f;
@@ -226,73 +264,94 @@ body {
   .selection-rock.selectScreen.container .statusBar {
     padding: 15px;
     background-color: #22205f;
-    max-width: 700px;
     color: white;
-    font-size: 18px; }
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-width: 1120px; }
 
-.agenda-kanye.agendaScreen.container .agendaItem {
-  font-size: 18px;
-  color: white;
-  background-color: #ed1c24;
-  padding: 5px 10px;
-  max-width: 350px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
-  min-width: 300px; }
+.agenda-kanye.agendaScreen.container {
+  padding-top: 120px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .agenda-kanye.agendaScreen.container .agendaItem {
+    font-size: 18px;
+    color: white;
+    background-color: #ed1c24;
+    padding: 5px 10px;
+    max-width: 350px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    min-width: 300px; }
+  .agenda-kanye.agendaScreen.container .agendaButton {
+    display: inline-block;
+    background-color: #606060;
+    padding: 5px 10px;
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: 900;
+    text-transform: uppercase; }
+    .agenda-kanye.agendaScreen.container .agendaButton:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+  .agenda-kanye.agendaScreen.container .statusBar {
+    padding: 15px;
+    background-color: #ed1c24;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-width: 1120px; }
 
-.agenda-kanye.agendaScreen.container .agendaButton {
-  display: inline-block;
-  background-color: #606060;
-  padding: 5px 10px;
-  color: white;
-  font-size: 18px;
-  margin-right: 10px;
-  margin-top: 10px;
-  font-weight: 900;
-  text-transform: uppercase; }
-  .agenda-kanye.agendaScreen.container .agendaButton:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer; }
-
-.agenda-kanye.agendaScreen.container .statusBar {
-  padding: 15px;
-  background-color: #ed1c24;
-  max-width: 700px;
-  color: white;
-  font-size: 18px; }
-
-.agenda-rock.agendaScreen.container .agendaItem {
-  font-size: 18px;
-  color: white;
-  background-color: #22205f;
-  padding: 5px 10px;
-  max-width: 350px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
-  min-width: 300px; }
-
-.agenda-rock.agendaScreen.container .agendaButton {
-  display: inline-block;
-  background-color: #606060;
-  padding: 5px 10px;
-  color: white;
-  font-size: 18px;
-  margin-right: 10px;
-  margin-top: 10px;
-  font-weight: 900;
-  text-transform: uppercase; }
-  .agenda-rock.agendaScreen.container .agendaButton:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer; }
-
-.agenda-rock.agendaScreen.container .statusBar {
-  padding: 15px;
-  background-color: #22205f;
-  max-width: 700px;
-  color: white;
-  font-size: 18px; }
+.agenda-rock.agendaScreen.container {
+  padding-top: 120px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .agenda-rock.agendaScreen.container .agendaItem {
+    font-size: 18px;
+    color: white;
+    background-color: #22205f;
+    padding: 5px 10px;
+    max-width: 350px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    min-width: 300px; }
+  .agenda-rock.agendaScreen.container .agendaButton {
+    display: inline-block;
+    background-color: #606060;
+    padding: 5px 10px;
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: 900;
+    text-transform: uppercase; }
+    .agenda-rock.agendaScreen.container .agendaButton:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+  .agenda-rock.agendaScreen.container .statusBar {
+    padding: 15px;
+    background-color: #22205f;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    min-width: 1120px; }
 
 .container-kanye.container .screen {
   min-height: 600px;
@@ -301,14 +360,14 @@ body {
     display: none !important; }
   .container-kanye.container .screen .memberName {
     margin: 10px;
-    color: white;
+    color: #ed1c24;
     font-size: 18px;
-    background-color: #ed1c24;
+    margin-top: 140px;
     padding: 10px; }
   .container-kanye.container .screen .member {
     text-align: center;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     vertical-align: top;
     min-width: 200px; }
     .container-kanye.container .screen .member .cost {
@@ -318,15 +377,22 @@ body {
         content: "$"; }
     .container-kanye.container .screen .member .actionButton {
       background-color: #ed1c24;
-      padding: 10px;
+      padding: 5px;
       margin: 5px 45px;
-      font-size: 18px;
+      font-size: 12px;
       color: white;
       text-align: center; }
+      .container-kanye.container .screen .member .actionButton:hover {
+        cursor: pointer; }
     .container-kanye.container .screen .member .actionButton.selected {
       background-color: #606060; }
     .container-kanye.container .screen .member .actionName {
-      padding-top: 5px; }
+      padding-top: 5px;
+      font-size: 16px; }
+    .container-kanye.container .screen .member .passiveButton {
+      padding: 0px;
+      margin-top: 5px;
+      margin-bottom: 32px; }
 
 .container-kanye.container .action {
   text-align: center; }
@@ -339,9 +405,14 @@ body {
 .container-kanye.container .statusBar {
   padding: 15px;
   background-color: #ed1c24;
-  max-width: 700px;
   color: white;
-  font-size: 18px; }
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-width: 1120px; }
 
 .container-rock.container .screen {
   min-height: 600px;
@@ -350,14 +421,14 @@ body {
     display: none !important; }
   .container-rock.container .screen .memberName {
     margin: 10px;
-    color: white;
+    color: #22205f;
     font-size: 18px;
-    background-color: #22205f;
+    margin-top: 140px;
     padding: 10px; }
   .container-rock.container .screen .member {
     text-align: center;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     vertical-align: top;
     min-width: 200px; }
     .container-rock.container .screen .member .cost {
@@ -367,15 +438,22 @@ body {
         content: "$"; }
     .container-rock.container .screen .member .actionButton {
       background-color: #22205f;
-      padding: 10px;
+      padding: 5px;
       margin: 5px 45px;
-      font-size: 18px;
+      font-size: 12px;
       color: white;
       text-align: center; }
+      .container-rock.container .screen .member .actionButton:hover {
+        cursor: pointer; }
     .container-rock.container .screen .member .actionButton.selected {
       background-color: #606060; }
     .container-rock.container .screen .member .actionName {
-      padding-top: 5px; }
+      padding-top: 5px;
+      font-size: 16px; }
+    .container-rock.container .screen .member .passiveButton {
+      padding: 0px;
+      margin-top: 5px;
+      margin-bottom: 32px; }
 
 .container-rock.container .action {
   text-align: center; }
@@ -388,9 +466,14 @@ body {
 .container-rock.container .statusBar {
   padding: 15px;
   background-color: #22205f;
-  max-width: 700px;
   color: white;
-  font-size: 18px; }
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-width: 1120px; }
 
 span.mailCount {
   background-color: white;
@@ -401,8 +484,11 @@ span.mailCount {
   font-size: 22px; }
 
 .mail {
-  margin-top: 100px; }
+  margin-top: 150px; }
   .mail .header {
     font-size: 24px;
     font-weight: 900;
     padding-bottom: 10px; }
+
+.abilityDesc {
+  display: none; }
