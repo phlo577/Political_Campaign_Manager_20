@@ -34,7 +34,7 @@ var entities = {
 
 'Targeted Ad' : {'description': 'Want to create some ads targeted towards your opponent\'s flock of "beliebers"? Use this. Now.', type: 'active', 'toggle': true, src: iconRoot + 'targeted_ads.png', cost: 5000},
 'Spread Fake News' : {'description': 'This is actually cool. You can spread some fake polls with this option providing some false information to your opponent. Fun times ahead!', type: 'active', src: iconRoot + 'fake_poll_post.png', cost:5000},
-'Troll Army' : {'description': 'No, this doesn\'t mean you can hire an army of actual trolls to attack your opponent! It\'s online trolls. Use them to lower the impact of your opponents online impact.', type: 'passive', src: iconRoot + 'troll_army.png', cost: 2000},
+'Troll Army' : {'description': 'No, this doesn\'t mean you can hire an army of actual trolls to attack your opponent! It\'s online trolls. Use them to lower the impact of your opponents online impact.', type: 'passive', src: iconRoot + 'troll_army.png'},
 'Candidate Posts' : {'description': 'Wanna be cool and hip? I\'m afraid it\'s too late for you, but you can use this option to improve your candidate\'s online presence (Twitter, Facebook etc.) and increase the impact of the political agenda.', type: 'passive', src: iconRoot + 'message_post.png'}
 },
 
@@ -102,8 +102,8 @@ var entities = {
 'Actions' : {
 
 'Backhanded Deals' : {'description': 'This is all you need to know: more money.', type: 'active', src: iconRoot + 'backhanded_deals.png', cost:20000},
-'Filler Position' : {'description': 'Have you just realised you urgently need a social media engineer? (Well, here\'s a sentence I\'d never thought I\'d say!) Don\'t worry, with this option you can hire somebody to fill in that position for a week. (Networking comes in handy, see?)', type: 'super', src: iconRoot + 'filler.png', cost:0},
-'Networking' : {'description': 'Make some connections. Find out who\'s dating and who\'s hatin\'. Helpful for other stuff as well.', type: 'passive', src: iconRoot + 'networking.png',cost:0}
+'Filler Position' : {'description': 'Have you just realised you urgently need a social media engineer? (Well, here\'s a sentence I\'d never thought I\'d say!) Don\'t worry, with this option you can hire somebody to fill in that position for a week. (Networking comes in handy, see?)', type: 'super', src: iconRoot + 'filler.png', cost:10000},
+'Networking' : {'description': 'Make some connections. Find out who\'s dating and who\'s hatin\'. Helpful for other stuff as well.', type: 'passive', src: iconRoot + 'networking.png'}
 
 
 },
@@ -118,7 +118,7 @@ var entities = {
 
 'Jack Of All Trades' : {'description': 'Don\'t waste precious time on doing detective work figuring out what this option does, I will explain.You can emulate any ability from one of the other campaign staff. You have a 50% chance of succeeding, though.', type: 'active', src: iconRoot + 'jack_of_all_trades.png', cost:2500},
 'Accidents Happen' : {'description': 'Oh, man. I really hoped you wouldn\'t be curious what this option does. Well…you can \"take care\" of any staff membe\d by \"taking care\" I mean \"making him swim with the fishes\". Still too subtle?', type: 'super', src:iconRoot +  'accidents_happen.png', cost:15000},
-"You Don\'t Want to Know" : {'description': 'Stop asking so many questions! Fine, if you must know… you\'ll get a 15% chance to fix a random "issue" you are currently facing. And don\'t forget, this conversation never took place.', type: 'passive', src: iconRoot + 'you_dont_wanna_know.png',cost:5000}
+"You Don\'t Want to Know" : {'description': 'Stop asking so many questions! Fine, if you must know… you\'ll get a 15% chance to fix a random "issue" you are currently facing. And don\'t forget, this conversation never took place.', type: 'passive', src: iconRoot + 'you_dont_wanna_know.png'}
 },
 
 'description' :'',src: '', cost: 5000
@@ -131,7 +131,7 @@ var entities = {
 
 'Cease and Desist' : {'description': 'You have a 35% chance to halt any fresh or ongoing action done by your opponent. Pretty neat, don\'t you think?', type: 'active', src: iconRoot + 'cease_and_desist.png', cost:5000},
 "Bury \'em in Paperwork" : {'description': 'You can bury your opponent in paperwork. Got it? It means he won\'t be able to combo any actions and will stop any ongoing actions he\'s having.', type: 'super', src: iconRoot + 'bury_them_paperwork.png',cost:10000},
-"Devil\'s Advocate" : {'description': 'It\'s like in that Al Pacino movie where he plays and advocate, but turns out he is the devil. Well, eliminate the devil part and you\'ll get it. No? Okay, let me rephrase: this option reduces the chances of your opponent having successful legal actions against you.', type: 'passive', src: iconRoot + 'devils_advocate.png',cost:5000}
+"Devil\'s Advocate" : {'description': 'It\'s like in that Al Pacino movie where he plays and advocate, but turns out he is the devil. Well, eliminate the devil part and you\'ll get it. No? Okay, let me rephrase: this option reduces the chances of your opponent having successful legal actions against you.', type: 'passive', src: iconRoot + 'devils_advocate.png'}
 
 },
 

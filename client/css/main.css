@@ -387,12 +387,13 @@ body {
     .container-kanye.container .screen .member .actionButton.selected {
       background-color: #606060; }
     .container-kanye.container .screen .member .actionName {
-      padding-top: 5px;
+      margin-top: 25px;
+      padding-top: 2px;
+      padding-bottom: 2px;
       font-size: 16px; }
     .container-kanye.container .screen .member .passiveButton {
-      padding: 0px;
-      margin-top: 5px;
-      margin-bottom: 32px; }
+      padding-bottom: 26px;
+      padding-top: 5px; }
 
 .container-kanye.container .action {
   text-align: center; }
@@ -448,12 +449,13 @@ body {
     .container-rock.container .screen .member .actionButton.selected {
       background-color: #606060; }
     .container-rock.container .screen .member .actionName {
-      padding-top: 5px;
+      margin-top: 25px;
+      padding-top: 2px;
+      padding-bottom: 2px;
       font-size: 16px; }
     .container-rock.container .screen .member .passiveButton {
-      padding: 0px;
-      margin-top: 5px;
-      margin-bottom: 32px; }
+      padding-bottom: 26px;
+      padding-top: 5px; }
 
 .container-rock.container .action {
   text-align: center; }
@@ -491,4 +493,10 @@ span.mailCount {
     padding-bottom: 10px; }
 
 .abilityDesc {
-  display: none; }
+  display: none;
+  background-color: #E6E6E6;
+  padding: 5px;
+  font-size: 13px;
+  max-width: 250px;
+  z-index: 999;
+  border: solid 1px #000000; }

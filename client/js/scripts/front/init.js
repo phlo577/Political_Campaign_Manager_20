@@ -159,6 +159,8 @@ for (var i in entities) {
 }
 
  $('.selectScreen').prepend("<div class='agendaHeader'><span class='big'>Team selection</span><br/><br/>As the new political campaign manager you need to first hire a new team. Please review all the below options at your disposal, but note you have only 5 slots available to hire people. Think it through, prioritize your needs and choose very wisely. Your staff can make or break your campaign. Each position comes with a certain number of \"abilities\". Read them carefully as some of them bring great benefits and others increase the chance of you or you candidate to face legal liability. Plan ahead, prioritize traits and most importantly, don't get distracted by the looks.</div>");
+$('.abilityDesc').css('position', 'absolute');
+$('.abilityImage').mouseover(function(ev){ var d = $(ev.target).closest('.ability').find('.abilityDesc').show() }).mouseout(function(){$('.abilityDesc').hide()});
 
 $(".container:not(':first')").hide();
 
@@ -187,6 +189,7 @@ $(ev.target).closest('.entity').fadeOut(function(){
     $(ev.target).closest('.entity').remove();
     
 });
+
 
 candidates[playing]['team'].push({'name': tx, 'actions': entities[tx]}); withdrawSum(playing, entities[tx].cost); showStatusBar();
 
