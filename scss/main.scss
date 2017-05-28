@@ -1,7 +1,7 @@
 /*------------General Rules---------*/
 
 $default-font:"Open Sans";
-$default-font-size : 18px;
+$default-font-size : 12px;
 $kanye-color:#ed1c24;
 $rock-color:#22205f;
 $green-button-color:#2ecc71;
@@ -21,10 +21,10 @@ $green-button-color:#2ecc71;
     }
     .turnButton {
             position: absolute;
-            top: 60px;
-            right: 150px;
+            top: 10px;
+            right: 185px;
             border:1px solid darken( $color, 10% );
-            background-color:$color;
+            background-color:#2c3e50;
             color:white;
             height: 50px;
             padding: 5px;
@@ -112,16 +112,14 @@ $green-button-color:#2ecc71;
 body{
     font-family:$default-font;
     background-image: url("../img/background5.png");
-    background-repeat: repeat-y;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
     //height:768px;
 }
 
 .background-image-smecher{
-     background-image: url("../img/background4.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-    
         height:768px;
     
 }
@@ -130,7 +128,7 @@ body{
             background-image: url("../img/the_rock.png");
             background-repeat: no-repeat;
             background-size: cover;
-            height:300px;
+            height:450px;
             width:300px;
             
         }
@@ -138,7 +136,7 @@ body{
             background-image: url("../img/kanye.png");
             background-repeat: no-repeat;
             background-size: cover;
-            height:300px;
+            height:450px;
             width:300px;
             
         }
@@ -149,13 +147,13 @@ body{
         padding:0;
         
         .row{
-                margin-top: 100px;
+                margin-top: 50px;
                 margin-left:200px;
                 margin-right:200px;
         }
         
     }
-    background-image: url("../img/background4.png");
+    background-image: url("../img/background6.png");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -184,8 +182,8 @@ body{
         	}
         
         .flip-container, .front, .back {
-        	width: 320px;
-        	height: 320px;
+        	width: 300px;
+        	height: 470px;
         	
         }
         
@@ -217,7 +215,7 @@ body{
         .back {
         	transform: rotateY(180deg);
         	background-color:#fff;
-        	height:300px;
+        	height:450px;
         	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
         	
         	
@@ -305,6 +303,62 @@ body{
 }
 
 .screen{
-    height:600px;
+    min-height:600px;
+    position:relative;
+    .memberName {
+        margin: 10px;
+        color: white;
+        font-size: 18px;
+        background-color: #c02326;
+        padding: 10px;
+    }
+    .member{
+        text-align:center;
+        display: inline-block;
+        margin-bottom:20px;
+        vertical-align:top;
+            min-width: 200px;
+        .cost{
+            color:$kanye-color;
+            text-align: center;
+            &:before{
+                    content: "$";        
+                
+            }
+        }
+        
+        .actionButton {
+            background-color: $kanye-color;
+            padding: 10px;
+            margin: 5px 45px;
+            font-size: 18px;
+            color: white;
+            text-align:center;
+        }
+        .actionButton.selected{
+           background-color:$green-button-color; 
+            
+        }
+        
+        .actionName{
+            padding-top:5px;
+            
+        }
+        
+        
+    }
     
 }
+
+.action{
+      // display: inline-block;
+          //  padding: 10px 15px;
+       text-align:center;
+        .abilityType {
+            text-transform: uppercase;
+            font-weight: 900;
+            }
+        img {
+            padding: 0 35px;
+}
+        }

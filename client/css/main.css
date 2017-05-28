@@ -2,31 +2,30 @@
 body {
   font-family: "Open Sans";
   background-image: url("../img/background5.png");
-  background-repeat: repeat-y;
-  background-size: contain; }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%; }
 
 .background-image-smecher {
-  background-image: url("../img/background4.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 768px; }
 
 .left-candidate {
   background-image: url("../img/the_rock.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 450px;
   width: 300px; }
 
 .right-candidate {
   background-image: url("../img/kanye.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 450px;
   width: 300px; }
 
 .home-page {
-  background-image: url("../img/background4.png");
+  background-image: url("../img/background6.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 768px;
@@ -45,7 +44,7 @@ body {
   .home-page .container-fluid {
     padding: 0; }
     .home-page .container-fluid .row {
-      margin-top: 100px;
+      margin-top: 50px;
       margin-left: 200px;
       margin-right: 200px; }
   .home-page .right {
@@ -55,8 +54,8 @@ body {
   .home-page .flip-container:hover .flipper, .home-page .flip-container.hover .flipper {
     transform: rotateY(180deg); }
   .home-page .flip-container, .home-page .front, .home-page .back {
-    width: 320px;
-    height: 320px; }
+    width: 300px;
+    height: 470px; }
   .home-page .flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
@@ -73,7 +72,7 @@ body {
   .home-page .back {
     transform: rotateY(180deg);
     background-color: #fff;
-    height: 300px;
+    height: 450px;
     box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
   .home-page .content-pictures p {
     padding: 10px; }
@@ -83,7 +82,7 @@ body {
     padding: 10px; }
   .home-page .container .intro-text {
     font-family: "Open Sans";
-    font-size: 18px;
+    font-size: 12px;
     padding: 15px 20px;
     text-align: center; }
   .home-page .container button.btn.btn-default {
@@ -114,10 +113,10 @@ body {
 
 .container-kanye .turnButton {
   position: absolute;
-  top: 60px;
-  right: 150px;
+  top: 10px;
+  right: 185px;
   border: 1px solid #c61017;
-  background-color: #ed1c24;
+  background-color: #2c3e50;
   color: white;
   height: 50px;
   padding: 5px;
@@ -138,10 +137,10 @@ body {
 
 .container-rock .turnButton {
   position: absolute;
-  top: 60px;
-  right: 150px;
+  top: 10px;
+  right: 185px;
   border: 1px solid #141339;
-  background-color: #22205f;
+  background-color: #2c3e50;
   color: white;
   height: 50px;
   padding: 5px;
@@ -261,4 +260,41 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 
 .screen {
-  height: 600px; }
+  min-height: 600px;
+  position: relative; }
+  .screen .memberName {
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #c02326;
+    padding: 10px; }
+  .screen .member {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+    min-width: 200px; }
+    .screen .member .cost {
+      color: #ed1c24;
+      text-align: center; }
+      .screen .member .cost:before {
+        content: "$"; }
+    .screen .member .actionButton {
+      background-color: #ed1c24;
+      padding: 10px;
+      margin: 5px 45px;
+      font-size: 18px;
+      color: white;
+      text-align: center; }
+    .screen .member .actionButton.selected {
+      background-color: #2ecc71; }
+    .screen .member .actionName {
+      padding-top: 5px; }
+
+.action {
+  text-align: center; }
+  .action .abilityType {
+    text-transform: uppercase;
+    font-weight: 900; }
+  .action img {
+    padding: 0 35px; }

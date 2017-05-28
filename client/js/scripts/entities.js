@@ -171,7 +171,8 @@ actions: {
 }, 
 
 team :[],
-src : ''
+src : '',
+inbox: []
 
 },
 
@@ -188,7 +189,8 @@ actions: {
 },
 
 team: [],
-src : ''
+src : '',
+inbox: []
 
 }
 

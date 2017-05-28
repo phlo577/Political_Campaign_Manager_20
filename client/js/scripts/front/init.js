@@ -30,8 +30,9 @@ var actions = candidates[playing].team.map(m => Object.keys(m['actions']['Action
 
 
 
-var actionTree = teamLabels.map(function(t,i){return "<div class='member'><div class='memberName'>" + t + "</div>" + actions[i].map(function(a, j){return "<div><img src='" + candidates[playing].team[i]['actions']['Actions'][a].src + "'/></div><div class='cost'>" + candidates[playing].team[i]['actions']['Actions'][a].cost +"</div><div class='cost'>" + candidates[playing].team[i]['actions']['Actions'][a].cost +"</div><div class='actionButton'>Select</div>"}).join('\n') +  "</div>"});
 
+
+var actionTree = teamLabels.map(function(t,i){return "<div class='member'><div class='memberName'>" + t + "</div>" + actions[i].map(function(a, j){return "<div class='action'><div class='actionName'>" + a +"</div><img src='" + candidates[playing].team[i]['actions']['Actions'][a].src + "'/></div><div class='cost'>" + candidates[playing].team[i]['actions']['Actions'][a].cost +"</div><div class='actionButton'>Select</div>"}).join('\n') +  "</div></div>"});
 $('.screen').empty();
 $('.screen').html(actionTree.join('\n'));
     
@@ -140,6 +141,9 @@ candidates[playing]['agenda'].push(tx);
 if (candidates[playing]['agenda'].length == 6) { nextScreen(); switchPlayer();}  
 
 });
+
+$('.tabs').find('.tab:eq(1)').on('click', function(){showActionPlan(playing);});
+
+$('.screen').on('click', function(ev){if ($(ev.target).is('.actionButton')) { $('.actionButton:visible').removeClass('selected').text('Select'); $(ev.target).addClass('selected').text('Selected'); }}) 
 });
 
-$('.tabs').find('tab:eq(1)').on('click', showActionPlan);
