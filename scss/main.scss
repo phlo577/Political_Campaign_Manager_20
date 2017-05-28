@@ -81,23 +81,7 @@ $green-button-color:#606060;
 }
         }
         
-        span.mailCount {
-            background-color: white;
-            color: $color;
-            border-radius: 30px;
-            margin-left: 10px;
-            padding: 0 10px;
-            font-size: 22px;
-        }
-        
-        .mail {
-             margin-top: 100px;
-        		.header {
-        		font-size: 24px;
-        		font-weight: 900;
-        		padding-bottom: 10px;
-        		}
-}
+       
         
     
     
@@ -137,6 +121,9 @@ $green-button-color:#606060;
 .screen{
     min-height:600px;
     position:relative;
+    .statusBar+.statusBar {
+    display: none !important;
+        }
     .memberName {
         margin: 10px;
         color: white;
@@ -194,6 +181,17 @@ $green-button-color:#606060;
             padding: 0 35px;
 }
         }   
+    
+}
+
+@mixin statusBarMixin($color){
+    .statusBar{
+       padding:15px;
+       background-color: $color;
+       max-width: 700px;
+           color: white;
+    font-size: 18px;
+   }
     
 }
 
@@ -372,33 +370,57 @@ body{
 
 .selection-kanye.selectScreen.container{
    @include selectionContainer($kanye-color);
+   padding-top: 20px;
+   @include statusBarMixin($kanye-color)
     
     
 }
 
 .selection-rock.selectScreen.container{
-   @include selectionContainer($rock-color); 
-    
+    @include selectionContainer($rock-color); 
+    padding-top: 20px;
+    @include statusBarMixin($rock-color)
     
 }
 .agenda-kanye.agendaScreen.container{
     @include agendaScreen($kanye-color); 
+    @include statusBarMixin($kanye-color)
     
 }
 
 .agenda-rock.agendaScreen.container{
     @include agendaScreen($rock-color); 
+    @include statusBarMixin($rock-color)
     
 }
 
 .container-kanye.container{
     @include container-style($kanye-color);
+    @include statusBarMixin($kanye-color)
     
 }
 
 
 .container-rock.container{
     @include container-style($rock-color);
-    
+    @include statusBarMixin($rock-color)    
 }
 
+ span.mailCount {
+            background-color: white;
+            color: $kanye-color;
+            border-radius: 30px;
+            margin-left: 10px;
+            padding: 0 10px;
+            font-size: 22px;
+        }
+        
+        .mail {
+             margin-top: 100px;
+        		.header {
+        		font-size: 24px;
+        		font-weight: 900;
+        		padding-bottom: 10px;
+        		}
+        }
+        

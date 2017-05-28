@@ -162,7 +162,7 @@ var candidates = {
 
 'agenda' : [],
 'funds' : 100000,
-'penalties' : [],
+'penalties' : 0,
 
 actions: {
 
@@ -180,7 +180,7 @@ inbox: []
 
 'agenda' : [],
 'funds' : 100000,
-'penalties' : [],
+'penalties' : 0,
 
 actions: {
 
@@ -204,5 +204,20 @@ var constants = {
 
 };
 
+var actionsObj = {
+    
+    'Spread the Word': function(){ var cols = candidates[playing].agenda.map(e => labelsArr.indexOf(e) + 46); 
+        
+        var rcol = cols[Math.floor(Math.random()*cols.length)];
+        
+        var db = (playing == 1)? kanyeDb : rockDb;
+         var col = selectColumns(db, [rcol]);
 
+//kanyeDb2 = kanyeDb;
+
+var newcol = updateDbSubset(col, {}, {'percent': true, 'value': 1}); mergeSubsetIntoDb(playing, newcol)
+        
+    }
+    
+}
 

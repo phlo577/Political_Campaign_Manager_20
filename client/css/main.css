@@ -152,101 +152,83 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
 
-.selection-kanye.selectScreen.container .entityText {
-  border: 1px solid #c61017;
-  background-color: #ed1c24;
-  color: white;
-  height: 50px;
-  padding: 5px;
-  font-size: 25px;
-  margin: 10px; }
-
-.selection-kanye.selectScreen.container .entity {
-  position: relative; }
-  .selection-kanye.selectScreen.container .entity .hireButton {
+.selection-kanye.selectScreen.container {
+  padding-top: 20px; }
+  .selection-kanye.selectScreen.container .entityText {
+    border: 1px solid #c61017;
+    background-color: #ed1c24;
     color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    background-color: #606060;
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    text-transform: uppercase; }
-    .selection-kanye.selectScreen.container .entity .hireButton:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-      cursor: pointer; }
-
-.selection-kanye.selectScreen.container .ability {
-  display: inline-block;
-  text-align: center; }
-  .selection-kanye.selectScreen.container .ability .abilityType {
-    text-transform: uppercase;
-    font-weight: 900; }
-  .selection-kanye.selectScreen.container .ability .abilityImage {
-    padding: 0 35px; }
-
-.selection-kanye.selectScreen.container span.mailCount {
-  background-color: white;
-  color: #ed1c24;
-  border-radius: 30px;
-  margin-left: 10px;
-  padding: 0 10px;
-  font-size: 22px; }
-
-.selection-kanye.selectScreen.container .mail {
-  margin-top: 100px; }
-  .selection-kanye.selectScreen.container .mail .header {
-    font-size: 24px;
-    font-weight: 900;
-    padding-bottom: 10px; }
-
-.selection-rock.selectScreen.container .entityText {
-  border: 1px solid #141339;
-  background-color: #22205f;
-  color: white;
-  height: 50px;
-  padding: 5px;
-  font-size: 25px;
-  margin: 10px; }
-
-.selection-rock.selectScreen.container .entity {
-  position: relative; }
-  .selection-rock.selectScreen.container .entity .hireButton {
+    height: 50px;
+    padding: 5px;
+    font-size: 25px;
+    margin: 10px; }
+  .selection-kanye.selectScreen.container .entity {
+    position: relative; }
+    .selection-kanye.selectScreen.container .entity .hireButton {
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #606060;
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      text-transform: uppercase; }
+      .selection-kanye.selectScreen.container .entity .hireButton:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+  .selection-kanye.selectScreen.container .ability {
+    display: inline-block;
+    text-align: center; }
+    .selection-kanye.selectScreen.container .ability .abilityType {
+      text-transform: uppercase;
+      font-weight: 900; }
+    .selection-kanye.selectScreen.container .ability .abilityImage {
+      padding: 0 35px; }
+  .selection-kanye.selectScreen.container .statusBar {
+    padding: 15px;
+    background-color: #ed1c24;
+    max-width: 700px;
     color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    background-color: #606060;
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    text-transform: uppercase; }
-    .selection-rock.selectScreen.container .entity .hireButton:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-      cursor: pointer; }
+    font-size: 18px; }
 
-.selection-rock.selectScreen.container .ability {
-  display: inline-block;
-  text-align: center; }
-  .selection-rock.selectScreen.container .ability .abilityType {
-    text-transform: uppercase;
-    font-weight: 900; }
-  .selection-rock.selectScreen.container .ability .abilityImage {
-    padding: 0 35px; }
-
-.selection-rock.selectScreen.container span.mailCount {
-  background-color: white;
-  color: #22205f;
-  border-radius: 30px;
-  margin-left: 10px;
-  padding: 0 10px;
-  font-size: 22px; }
-
-.selection-rock.selectScreen.container .mail {
-  margin-top: 100px; }
-  .selection-rock.selectScreen.container .mail .header {
-    font-size: 24px;
-    font-weight: 900;
-    padding-bottom: 10px; }
+.selection-rock.selectScreen.container {
+  padding-top: 20px; }
+  .selection-rock.selectScreen.container .entityText {
+    border: 1px solid #141339;
+    background-color: #22205f;
+    color: white;
+    height: 50px;
+    padding: 5px;
+    font-size: 25px;
+    margin: 10px; }
+  .selection-rock.selectScreen.container .entity {
+    position: relative; }
+    .selection-rock.selectScreen.container .entity .hireButton {
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #606060;
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      text-transform: uppercase; }
+      .selection-rock.selectScreen.container .entity .hireButton:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+  .selection-rock.selectScreen.container .ability {
+    display: inline-block;
+    text-align: center; }
+    .selection-rock.selectScreen.container .ability .abilityType {
+      text-transform: uppercase;
+      font-weight: 900; }
+    .selection-rock.selectScreen.container .ability .abilityImage {
+      padding: 0 35px; }
+  .selection-rock.selectScreen.container .statusBar {
+    padding: 15px;
+    background-color: #22205f;
+    max-width: 700px;
+    color: white;
+    font-size: 18px; }
 
 .agenda-kanye.agendaScreen.container .agendaItem {
   font-size: 18px;
@@ -273,6 +255,13 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
 
+.agenda-kanye.agendaScreen.container .statusBar {
+  padding: 15px;
+  background-color: #ed1c24;
+  max-width: 700px;
+  color: white;
+  font-size: 18px; }
+
 .agenda-rock.agendaScreen.container .agendaItem {
   font-size: 18px;
   color: white;
@@ -298,9 +287,18 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
 
+.agenda-rock.agendaScreen.container .statusBar {
+  padding: 15px;
+  background-color: #22205f;
+  max-width: 700px;
+  color: white;
+  font-size: 18px; }
+
 .container-kanye.container .screen {
   min-height: 600px;
   position: relative; }
+  .container-kanye.container .screen .statusBar + .statusBar {
+    display: none !important; }
   .container-kanye.container .screen .memberName {
     margin: 10px;
     color: white;
@@ -338,9 +336,18 @@ body {
   .container-kanye.container .action img {
     padding: 0 35px; }
 
+.container-kanye.container .statusBar {
+  padding: 15px;
+  background-color: #ed1c24;
+  max-width: 700px;
+  color: white;
+  font-size: 18px; }
+
 .container-rock.container .screen {
   min-height: 600px;
   position: relative; }
+  .container-rock.container .screen .statusBar + .statusBar {
+    display: none !important; }
   .container-rock.container .screen .memberName {
     margin: 10px;
     color: white;
@@ -377,3 +384,25 @@ body {
     font-weight: 900; }
   .container-rock.container .action img {
     padding: 0 35px; }
+
+.container-rock.container .statusBar {
+  padding: 15px;
+  background-color: #22205f;
+  max-width: 700px;
+  color: white;
+  font-size: 18px; }
+
+span.mailCount {
+  background-color: white;
+  color: #ed1c24;
+  border-radius: 30px;
+  margin-left: 10px;
+  padding: 0 10px;
+  font-size: 22px; }
+
+.mail {
+  margin-top: 100px; }
+  .mail .header {
+    font-size: 24px;
+    font-weight: 900;
+    padding-bottom: 10px; }

@@ -63,6 +63,7 @@ var labelsObj = {
 };
  
 var finalArr = [];
+
 var kanyeEq, rockEq; 
 
 var kanyeDb, rockDb;
@@ -77,6 +78,7 @@ var preferencesScale = [ 0.3, 0.7] // less than 0.3 => doesn't matter, anything 
 function populateDb(){
     
 if (excLines.length > 0){
+    
 var lineArr = excLines[0].split('\t');
  
 var lineArrResult = lineArr.map(function(e,i){ 
@@ -163,7 +165,7 @@ function updateDbSubset(columnObj, condObj, amountObj) {
 function splitDbs(){
     
     kanyeDb = finalArr;
-rockDb = finalArr;
+rockDb = finalArr.slice(0);
     
 }
 
@@ -179,8 +181,9 @@ function mergeSubsetIntoDb(candidateFlag, columnObj){
        //console.log(colArr);
        
         for (var i = 0; i < kanyeDb.length; i++) {
-       //  console.log('changing value ' +  kanyeDb[i][colKeys[k]] + ' on line ' + i + ' to ' + colArr[i])  ; 
+       // console.log('changing value ' +  kanyeDb[i][colKeys[k]] + ' on line ' + i + ' to ' + colArr[i])  ; 
         kanyeDb[i][colKeys[k]] = colArr[i];
+        
         kanyeDb[i][92] = kanyeEq.hypothesize({x: kanyeDb[i].slice(0,92)})[0];
         
     }
@@ -213,7 +216,7 @@ function mergeSubsetIntoDb(candidateFlag, columnObj){
 
 kanyeDb2 = kanyeDb;
 
-var newcol = updateDbSubset(col, {}, {value: 60}); setTimeout(function(){mergeSubsetIntoDb(1, newcol);}, 100); 
+var newcol = updateDbSubset(col, {}, {'percent': true, 'value': 60}); setTimeout(function(){mergeSubsetIntoDb(1, newcol);}, 100); 
   
   */
   
