@@ -195,7 +195,7 @@ function mergeSubsetIntoDb(candidateFlag, columnObj){
         for (var i = 0; i < rockDb.length; i++) {
             
         rockDb[i][colKeys[k]] = colArr[i];
-         rockDb[i][93] = rockEq.hypothesize({x: rockDb[i].slice(0,93)})[0];
+         rockDb[i][93] = rockEq.hypothesize({x: rockDb[i].slice(0,92)})[0];
 
     }
     
@@ -249,7 +249,7 @@ function getVotesPercentages(criteriaObj){
     
 } 
 
-//use :  poll by criteria : getVotesPercentages({'col' : 20, value: 1})
+//use :  poll by criteria : getVotesPercentages({'col' : 40, value: 1})
 // national getVotesPercentages({})
 
 

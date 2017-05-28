@@ -4,7 +4,8 @@ $default-font:"Open Sans";
 $default-font-size : 12px;
 $kanye-color:#ed1c24;
 $rock-color:#22205f;
-$green-button-color:#2ecc71;
+//$green-button-color:#2ecc71;
+$green-button-color:#606060;
 
 @mixin tabs-styles($color){
     .tabs{
@@ -32,6 +33,7 @@ $green-button-color:#2ecc71;
             &:hover{
               border:1px solid darken( $color, 20% );  
              box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+             cursor:pointer;
             }
     }
     
@@ -53,15 +55,16 @@ $green-button-color:#2ecc71;
     position:relative;
         .hireButton {
             color: white;
-            padding: 5px 21px;
+            padding: 12px 25px;
             font-size: 18px;
-            margin-bottom: 10px;
-            background-color: #27ae60;
+            background-color: $green-button-color;
             position: absolute;
             right: 10px;
-            bottom: -15px;
+            top: 0px;
+            text-transform: uppercase;
             &:hover{
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            cursor:pointer;
             }
         }
     }
@@ -78,6 +81,24 @@ $green-button-color:#2ecc71;
 }
         }
         
+        span.mailCount {
+            background-color: white;
+            color: $color;
+            border-radius: 30px;
+            margin-left: 10px;
+            padding: 0 10px;
+            font-size: 22px;
+        }
+        
+        .mail {
+             margin-top: 100px;
+        		.header {
+        		font-size: 24px;
+        		font-weight: 900;
+        		padding-bottom: 10px;
+        		}
+}
+        
     
     
 }
@@ -88,7 +109,8 @@ $green-button-color:#2ecc71;
         background-color: $color;
         padding: 5px 10px;
         max-width: 350px;
-        margin: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         display: inline-block;
         min-width:300px;
     }
@@ -104,8 +126,74 @@ $green-button-color:#2ecc71;
         text-transform: uppercase;
         &:hover{
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            cursor:pointer;
             }
 }
+    
+}
+
+@mixin container-style($color){
+ 
+.screen{
+    min-height:600px;
+    position:relative;
+    .memberName {
+        margin: 10px;
+        color: white;
+        font-size: 18px;
+        background-color: $color;
+        padding: 10px;
+    }
+    .member{
+        text-align:center;
+        display: inline-block;
+        margin-bottom:20px;
+        vertical-align:top;
+            min-width: 200px;
+        .cost{
+            color:$kanye-color;
+            text-align: center;
+            &:before{
+                    content: "$";        
+                
+            }
+        }
+        
+        .actionButton {
+            background-color: $color;
+            padding: 10px;
+            margin: 5px 45px;
+            font-size: 18px;
+            color: white;
+            text-align:center;
+        }
+        .actionButton.selected{
+           background-color:$green-button-color; 
+            
+        }
+        
+        .actionName{
+            padding-top:5px;
+            
+        }
+        
+        
+    }
+    
+}
+
+.action{
+      // display: inline-block;
+          //  padding: 10px 15px;
+       text-align:center;
+        .abilityType {
+            text-transform: uppercase;
+            font-weight: 900;
+            }
+        img {
+            padding: 0 35px;
+}
+        }   
     
 }
 
@@ -157,7 +245,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     
-    height:768px;
+    height:755px;
     
         
             /* Flipping containers */
@@ -263,6 +351,7 @@ body{
     &:hover{
         border: 2px solid #22205f;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        cursor:pointer;
     }
     }
 }
@@ -302,63 +391,14 @@ body{
     
 }
 
-.screen{
-    min-height:600px;
-    position:relative;
-    .memberName {
-        margin: 10px;
-        color: white;
-        font-size: 18px;
-        background-color: #c02326;
-        padding: 10px;
-    }
-    .member{
-        text-align:center;
-        display: inline-block;
-        margin-bottom:20px;
-        vertical-align:top;
-            min-width: 200px;
-        .cost{
-            color:$kanye-color;
-            text-align: center;
-            &:before{
-                    content: "$";        
-                
-            }
-        }
-        
-        .actionButton {
-            background-color: $kanye-color;
-            padding: 10px;
-            margin: 5px 45px;
-            font-size: 18px;
-            color: white;
-            text-align:center;
-        }
-        .actionButton.selected{
-           background-color:$green-button-color; 
-            
-        }
-        
-        .actionName{
-            padding-top:5px;
-            
-        }
-        
-        
-    }
+.container-kanye.container{
+    @include container-style($kanye-color);
     
 }
 
-.action{
-      // display: inline-block;
-          //  padding: 10px 15px;
-       text-align:center;
-        .abilityType {
-            text-transform: uppercase;
-            font-weight: 900;
-            }
-        img {
-            padding: 0 35px;
+
+.container-rock.container{
+    @include container-style($rock-color);
+    
 }
-        }
+

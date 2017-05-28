@@ -28,7 +28,7 @@ body {
   background-image: url("../img/background6.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 768px;
+  height: 755px;
   /* Flipping containers */
   /*
        .left{
@@ -99,7 +99,8 @@ body {
     font-family: "Open Sans"; }
     .home-page .container button.btn.btn-default:hover {
       border: 2px solid #22205f;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
 
 .container-kanye .tabs {
   text-align: center; }
@@ -123,7 +124,8 @@ body {
   font-size: 25px; }
   .container-kanye .turnButton:hover {
     border: 1px solid #970c11;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
 
 .container-rock .tabs {
   text-align: center; }
@@ -147,7 +149,8 @@ body {
   font-size: 25px; }
   .container-rock .turnButton:hover {
     border: 1px solid #070613;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
 
 .selection-kanye.selectScreen.container .entityText {
   border: 1px solid #c61017;
@@ -162,15 +165,16 @@ body {
   position: relative; }
   .selection-kanye.selectScreen.container .entity .hireButton {
     color: white;
-    padding: 5px 21px;
+    padding: 12px 25px;
     font-size: 18px;
-    margin-bottom: 10px;
-    background-color: #27ae60;
+    background-color: #606060;
     position: absolute;
     right: 10px;
-    bottom: -15px; }
+    top: 0px;
+    text-transform: uppercase; }
     .selection-kanye.selectScreen.container .entity .hireButton:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
 
 .selection-kanye.selectScreen.container .ability {
   display: inline-block;
@@ -180,6 +184,21 @@ body {
     font-weight: 900; }
   .selection-kanye.selectScreen.container .ability .abilityImage {
     padding: 0 35px; }
+
+.selection-kanye.selectScreen.container span.mailCount {
+  background-color: white;
+  color: #ed1c24;
+  border-radius: 30px;
+  margin-left: 10px;
+  padding: 0 10px;
+  font-size: 22px; }
+
+.selection-kanye.selectScreen.container .mail {
+  margin-top: 100px; }
+  .selection-kanye.selectScreen.container .mail .header {
+    font-size: 24px;
+    font-weight: 900;
+    padding-bottom: 10px; }
 
 .selection-rock.selectScreen.container .entityText {
   border: 1px solid #141339;
@@ -194,15 +213,16 @@ body {
   position: relative; }
   .selection-rock.selectScreen.container .entity .hireButton {
     color: white;
-    padding: 5px 21px;
+    padding: 12px 25px;
     font-size: 18px;
-    margin-bottom: 10px;
-    background-color: #27ae60;
+    background-color: #606060;
     position: absolute;
     right: 10px;
-    bottom: -15px; }
+    top: 0px;
+    text-transform: uppercase; }
     .selection-rock.selectScreen.container .entity .hireButton:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
 
 .selection-rock.selectScreen.container .ability {
   display: inline-block;
@@ -213,19 +233,35 @@ body {
   .selection-rock.selectScreen.container .ability .abilityImage {
     padding: 0 35px; }
 
+.selection-rock.selectScreen.container span.mailCount {
+  background-color: white;
+  color: #22205f;
+  border-radius: 30px;
+  margin-left: 10px;
+  padding: 0 10px;
+  font-size: 22px; }
+
+.selection-rock.selectScreen.container .mail {
+  margin-top: 100px; }
+  .selection-rock.selectScreen.container .mail .header {
+    font-size: 24px;
+    font-weight: 900;
+    padding-bottom: 10px; }
+
 .agenda-kanye.agendaScreen.container .agendaItem {
   font-size: 18px;
   color: white;
   background-color: #ed1c24;
   padding: 5px 10px;
   max-width: 350px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: inline-block;
   min-width: 300px; }
 
 .agenda-kanye.agendaScreen.container .agendaButton {
   display: inline-block;
-  background-color: #2ecc71;
+  background-color: #606060;
   padding: 5px 10px;
   color: white;
   font-size: 18px;
@@ -234,7 +270,8 @@ body {
   font-weight: 900;
   text-transform: uppercase; }
   .agenda-kanye.agendaScreen.container .agendaButton:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
 
 .agenda-rock.agendaScreen.container .agendaItem {
   font-size: 18px;
@@ -242,13 +279,14 @@ body {
   background-color: #22205f;
   padding: 5px 10px;
   max-width: 350px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: inline-block;
   min-width: 300px; }
 
 .agenda-rock.agendaScreen.container .agendaButton {
   display: inline-block;
-  background-color: #2ecc71;
+  background-color: #606060;
   padding: 5px 10px;
   color: white;
   font-size: 18px;
@@ -257,44 +295,85 @@ body {
   font-weight: 900;
   text-transform: uppercase; }
   .agenda-rock.agendaScreen.container .agendaButton:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
 
-.screen {
+.container-kanye.container .screen {
   min-height: 600px;
   position: relative; }
-  .screen .memberName {
+  .container-kanye.container .screen .memberName {
     margin: 10px;
     color: white;
     font-size: 18px;
-    background-color: #c02326;
+    background-color: #ed1c24;
     padding: 10px; }
-  .screen .member {
+  .container-kanye.container .screen .member {
     text-align: center;
     display: inline-block;
     margin-bottom: 20px;
     vertical-align: top;
     min-width: 200px; }
-    .screen .member .cost {
+    .container-kanye.container .screen .member .cost {
       color: #ed1c24;
       text-align: center; }
-      .screen .member .cost:before {
+      .container-kanye.container .screen .member .cost:before {
         content: "$"; }
-    .screen .member .actionButton {
+    .container-kanye.container .screen .member .actionButton {
       background-color: #ed1c24;
       padding: 10px;
       margin: 5px 45px;
       font-size: 18px;
       color: white;
       text-align: center; }
-    .screen .member .actionButton.selected {
-      background-color: #2ecc71; }
-    .screen .member .actionName {
+    .container-kanye.container .screen .member .actionButton.selected {
+      background-color: #606060; }
+    .container-kanye.container .screen .member .actionName {
       padding-top: 5px; }
 
-.action {
+.container-kanye.container .action {
   text-align: center; }
-  .action .abilityType {
+  .container-kanye.container .action .abilityType {
     text-transform: uppercase;
     font-weight: 900; }
-  .action img {
+  .container-kanye.container .action img {
+    padding: 0 35px; }
+
+.container-rock.container .screen {
+  min-height: 600px;
+  position: relative; }
+  .container-rock.container .screen .memberName {
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #22205f;
+    padding: 10px; }
+  .container-rock.container .screen .member {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+    min-width: 200px; }
+    .container-rock.container .screen .member .cost {
+      color: #ed1c24;
+      text-align: center; }
+      .container-rock.container .screen .member .cost:before {
+        content: "$"; }
+    .container-rock.container .screen .member .actionButton {
+      background-color: #22205f;
+      padding: 10px;
+      margin: 5px 45px;
+      font-size: 18px;
+      color: white;
+      text-align: center; }
+    .container-rock.container .screen .member .actionButton.selected {
+      background-color: #606060; }
+    .container-rock.container .screen .member .actionName {
+      padding-top: 5px; }
+
+.container-rock.container .action {
+  text-align: center; }
+  .container-rock.container .action .abilityType {
+    text-transform: uppercase;
+    font-weight: 900; }
+  .container-rock.container .action img {
     padding: 0 35px; }

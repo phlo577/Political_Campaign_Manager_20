@@ -11,8 +11,12 @@ c.slideUp('slow', function(){
 
 c.next('.container').slideDown('slow', function(){
     
-    if ($('.day').is(':visible')) {$('.day').not('.day-'+ day).hide();}
-    
+    if ($('.day').is(':visible')) {$('.day').not('.day-'+ day).hide();
+        
+ $('.tabs').find('.tab:eq(0)').filter(':visible').html($('.tabs').find('.tab:eq(0)').filter(':visible').html() + "<span class='mailCount'>" + candidates[playing].inbox[day-1].length + "</span>");
+
+    }
+
 });
 
 });
@@ -39,6 +43,8 @@ $('.screen').html(actionTree.join('\n'));
 }
 
 $( document ).ready(function() {
+    
+    generateInbox();
     $(".intro-text").html(textsObj['intro-text']);
     
     $("<div class='selection-kanye selectScreen container'></div>").insertBefore('.container-kanye');
@@ -142,8 +148,25 @@ if (candidates[playing]['agenda'].length == 6) { nextScreen(); switchPlayer();}
 
 });
 
+
+
 $('.tabs').find('.tab:eq(1)').on('click', function(){showActionPlan(playing);});
 
 $('.screen').on('click', function(ev){if ($(ev.target).is('.actionButton')) { $('.actionButton:visible').removeClass('selected').text('Select'); $(ev.target).addClass('selected').text('Selected'); }}) 
+
+$('.tabs').find('.tab:eq(0)').on('click', function(){showInbox(playing, day);});    
+    
 });
 
+
+
+function showInbox(candidateFlag, day) {
+    
+    var ind = day - 1;
+    
+    var mailTree = candidates[1].inbox[day-1].map(function(e,i){ return "<div class='mail'><div class='header'>New email</div> <div class='mailbody'>" + e + "</div></div>"}).join('\n')
+    $('.screen').empty();
+    
+    $('.screen').html(mailTree);
+}
+    
